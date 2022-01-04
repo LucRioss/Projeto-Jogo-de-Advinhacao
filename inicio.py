@@ -1,16 +1,13 @@
 import sys
-import criacaodecontatxt
+from criacaodecontatxt import CriarConta
 from login import EntrarNaConta
-from typing import Match
-#match-case-python-disponivel-na-versão-3.10-versão-utilizada-para-a-criação-desse-codigo-está-na-3.7-
+#match-case-python-disponivel-na-versão-3.10-versão-utilizada-para-a-criação-desse-codigo-está-na-3.7
 
 
 
 class Comeco:
     def principal():
 
-        entrar = EntrarNaConta
-        criar = criacaodecontatxt.CriarConta
         loop = True
 
         print("\n------------BEM VINDO-----------","\n","Selecione uma das opções Abaixo:","\n")
@@ -21,9 +18,9 @@ class Comeco:
         while loop == True:            
 
             if selecionar == 1:
-                entrar.login()
+                EntrarNaConta.login()
             elif selecionar == 2:
-                criar.criar()
+                CriarConta.criar()
             elif selecionar == 0:
                 print("\nPrograma Encerrado\n")
                 loop = False

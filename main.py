@@ -1,6 +1,4 @@
 import sys
-import inicio
+from inicio import Comeco
 
-
-inicio = inicio.Comeco
-inicio.principal()
+Comeco.principal()

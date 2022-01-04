@@ -1,7 +1,8 @@
 import sys
+import inicio 
 from game import Game
 from typing import Text
-import inicio 
+
 
 class EntrarNaConta:
 
