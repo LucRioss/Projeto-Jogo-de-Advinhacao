@@ -8,9 +8,8 @@ class EntrarNaConta:
     def login():
         game = Game
         ini = inicio.Comeco
-        loop = False
         
-        while loop == False:    
+        while True:    
             user = input('\nDigite o Usuário:\t')
             key = input('Dgite a Senha:\t')
             arquivotxt = open("log.txt","r")
@@ -20,7 +19,6 @@ class EntrarNaConta:
 
                 if  user == valores[0] and key == valores[1]:
                     print('\nAcesso Concedido')
-                    loop = True
                     game.jogo()               
                     break  
                 elif user != valores[0] or key != valores[1]:                   
@@ -31,6 +29,6 @@ class EntrarNaConta:
                     if sair == 1:
                         ini.principal()
                     elif sair == 0:
-                        break
+                        sys.exit()
 
-        arquivotxt.close()
+            arquivotxt.close()
