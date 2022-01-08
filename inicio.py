@@ -1,9 +1,6 @@
 import sys
 from criacaodecontatxt import CriarConta
 from login import EntrarNaConta
-#match-case-python-disponivel-na-versão-3.10-versão-utilizada-para-a-criação-desse-codigo-está-na-3.7
-
-
 
 class Comeco:
     def principal():
