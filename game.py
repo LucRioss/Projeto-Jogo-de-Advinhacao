@@ -7,15 +7,14 @@ class Game:
 
         print('JOGO INICIADO - ADIVINHAÇÃO')
         tentativas = 3
-        loop = False
+        #loop = False
         ini = inicio.Comeco
 
-        while loop == False:
+        while True:
 
             while tentativas != 0 :
-
-                
-                A = int(input('Digite um numero entre 1 a 900: '))
+               
+                A = int(input('\nDigite um número entre 1 a 900: '))
                 if A > 900 or A < 1:
                     print('****Entrada de Valores Errada****')
                 elif A <= 599:
@@ -27,17 +26,23 @@ class Game:
                 elif A >= 851 and A <= 899:
                     print('Está Muito Quente')
                 elif A == 900:
-                    print('PARABENS VC ACERTOU!!!!')
+                    print('ENCONTROU PARABÉNS!!!')
                     break
 
                 tentativas -= 1            
                 print('\n{} tentativas sobrando' .format(tentativas))
             
-            recebe = int(input("\nDigite \n1 para jogar novamente\n 2 Para encerrar\n 3 Para voltar a tela de Login:\t"))    
-            if recebe == 1:
+            print('\n',
+            '---------Opções--------','\n',
+            '1 Para Jogar Novamente','\n',
+            '2 Para Encerrar o Programa','\n',
+            '3 Para Voltar a tela de Login\t')
+            valida = int(input((' Digite:')))    
+            
+            if valida == 1:
                 tentativas = 3
-            elif recebe == 2:
-                print("Programa Finalizado")
+            elif valida == 2:
+                print('\n------Programa Finalizado--------')
                 sys.exit()
-            elif recebe == 3:
-                ini.principal() 
+            elif valida == 3:
+                ini.principal()

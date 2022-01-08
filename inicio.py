@@ -7,25 +7,24 @@ from login import EntrarNaConta
 
 class Comeco:
     def principal():
+        print('\n','------------BEM VINDO-----------', '\n', 'Selecione uma das Opções Abaixo:', '\n', '-'*32, '\n')
+        print(' 1 Para Entrar em uma Conta já Existente.' ,'\n', '2 Para Criar uma Nova Conta.','\n','0 Para Encerrar o Programa')
+        selecionar = int(input(' Digite a opção desejada: '))
 
-        loop = True
-
-        print("\n------------BEM VINDO-----------","\n","Selecione uma das opções Abaixo:","\n")
-        print("1 Para entrar em uma conta já existente." ,"\n", "2 Para criar uma nova conta.")
-        selecionar = int(input("Digite a opção desejada: "))
-        
-
-        while loop == True:            
+        while True:            
 
             if selecionar == 1:
                 EntrarNaConta.login()
             elif selecionar == 2:
                 CriarConta.criar()
             elif selecionar == 0:
-                print("\nPrograma Encerrado\n")
-                loop = False
+                print('\n')
+                print('-='*20)
+                print('\tPrograma Encerrado')
+                print('-='*20)
+                sys.exit()
             elif selecionar !=1 or selecionar != 2 or selecionar != 0:
-                parada = int(input("\nOpção não encontrada, por favor digite novamente ou 0 para sair:  "))
+                parada = int(input('\nOpção não encontrada, Por Favor digite novamente:\t'))
                 selecionar = parada
             
 

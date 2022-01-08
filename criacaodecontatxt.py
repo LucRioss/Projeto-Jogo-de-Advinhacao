@@ -4,11 +4,10 @@ import inicio
 
 class CriarConta:
     
-
     def criar(): 
         
-        usernew = input("\nDigite um nome de Usuario valido:  ")
-        keynew = input("\nDigite um nome de Senha valida:  ")
+        usernew = input("\nDigite o Nome de Usuário:\t")
+        keynew = input("\nDigite a Senha:\t")
        
         arq = open("log.txt","a")
         arq.write("\n")
@@ -19,10 +18,12 @@ class CriarConta:
             arq.write(" ")
         arq.close()
         
-        print("\nCaso queira voltar a tela de login digite 1\n",
-             "Caso queira sair digite 2")
+        print('\n','-------Opções--------',
+              '\n','1 Para Voltar a Tela de Login',
+              '\n','2 Para Sair Digite')
         decisao = int(input("\nDigite a Opção:  "))
-        
+        print('-'*30)
+
         if decisao == 1:
             ini = inicio.Comeco
             ini.principal()
